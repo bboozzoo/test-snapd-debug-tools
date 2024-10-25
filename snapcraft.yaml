@@ -1,0 +1,35 @@
+name: test-snapd-debug-tools
+summary: snapd and Ubuntu Core debug tools
+description: |
+  Collection of tools for debugging snapd and Ubuntu Core
+version: 1.0.0
+base: core24
+confinement: strict
+
+apps:
+  tool:
+    command: bin/cmd
+
+parts:
+  efitools:
+    plugin: nil
+    stage-packages:
+      - efitools
+    prime:
+      - -usr/share/man
+
+  keyctl:
+    plugin: nil
+    stage-packages:
+      - keyutils
+    prime:
+      - -usr/share/man
+
+  seccomp:
+    plugin: nil
+    stage-packages:
+      - seccomp
+
+  snap-files:
+    plugin: dump
+    source: .
