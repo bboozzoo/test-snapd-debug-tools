@@ -28,6 +28,7 @@ parts:
   seccomp:
     plugin: nil
     stage-packages:
+      # for scmp_sys_resolver
       - seccomp
 
   snapd:
