@@ -21,4 +21,6 @@ Eg. invoke `keyctl`:
 ```
 test-snapd-debug-tools.tool keyctl show
 ```
+## Tools
 
+See [snapcraft.yaml](snapcraft.yaml)
