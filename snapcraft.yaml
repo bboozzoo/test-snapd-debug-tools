@@ -30,6 +30,14 @@ parts:
     stage-packages:
       - seccomp
 
+  snapd:
+    plugin: nil
+    stage-packages:
+      - snapd
+    stage:
+      # stage the snap binary for access to `snap debug api` command
+      - usr/bin/snap
+
   snap-files:
     plugin: dump
     source: .
